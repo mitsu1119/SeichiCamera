@@ -6,11 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.gms.maps.GoogleMap
+import io.github.mitsu1119.seichicamera.R
 import io.github.mitsu1119.seichicamera.databinding.FragmentMapBinding
 
 class MapFragment: Fragment() {
     private var _binding: FragmentMapBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var mMap: GoogleMap
 
     override fun onCreateView(
         inflater: LayoutInflater,
